@@ -1,11 +1,13 @@
 import Head from "next/head";
+import App from "./_app";
 
 export default function Home() {
 	return (
-		<div className="container">
+		<div>
 			<Head>
-				<title>Index Page</title>
+				<title>Home</title>
 			</Head>
+			<App />
 		</div>
 	);
 }
