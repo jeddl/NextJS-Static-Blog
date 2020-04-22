@@ -6,10 +6,10 @@ const Post = ({article}) => {
 };
 
 export async function getStaticPaths() {
-	const files = fs.readdirSync("../contents/articles");
-	console.log(files);
+	const files = fs.readdirSync("src/contents/articles");
+
 	return {
-		path: files.map(filename => ({
+		paths: files.map(filename => ({
 			params: {
 				article: filename.replace(".md", ""),
 			},
