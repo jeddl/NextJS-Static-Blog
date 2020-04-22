@@ -1,25 +1,24 @@
 import Nav from "react-bootstrap/Nav";
+import Link from "next/Link";
 
 function Navigationbar() {
 	return (
 		<div>
-			<Nav
-				className="justify-content-center"
-				variant="pills"
-				defaultActiveKey="/home"
-			>
-				<Nav.Item>
-					<Nav.Link href="/home">Home</Nav.Link>
-				</Nav.Item>
-				<Nav.Item>
-					<Nav.Link eventKey="articles" href="/articles">
-						Articles
-					</Nav.Link>
-				</Nav.Item>
-				<Nav.Item>
-					<Nav.Link href="/Contact">Contact</Nav.Link>
-				</Nav.Item>
-			</Nav>
+			<Nav.Item>
+				<Link href="/index">
+					<a>Home</a>
+				</Link>
+			</Nav.Item>
+			<Nav.Item>
+				<Link href="/articles">
+					<a>Ariticles</a>
+				</Link>
+			</Nav.Item>
+			<Nav.Item>
+				<Link href="/contact">
+					<a>Contact</a>
+				</Link>
+			</Nav.Item>
 		</div>
 	);
 }

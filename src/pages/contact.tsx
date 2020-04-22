@@ -1,10 +1,10 @@
 import Navigationbar from "./navbar";
 
-export default function Index() {
+export default function Contact() {
 	return (
 		<div>
 			<Navigationbar />
-			<h1>Index Page</h1>
+			<h1>Contact Me</h1>
 		</div>
 	);
 }

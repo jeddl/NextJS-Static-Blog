@@ -1,12 +1,13 @@
-import Navigationbar from "./navbar";
-import "bootstrap/dist/css/bootstrap.css";
+import Head from "next/head";
+import Index from "./index";
 
-function App() {
+export default function App() {
 	return (
-		<>
-			<Navigationbar />
-		</>
+		<div>
+			<Head>
+				<title>Home</title>
+			</Head>
+			<Index />
+		</div>
 	);
 }
-
-export default App;
