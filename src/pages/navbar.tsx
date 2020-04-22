@@ -1,10 +1,14 @@
+import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Link from "next/Link";
 
 function Navigationbar() {
 	return (
 		<div>
-			<Nav.Item>
+			<Link href="/test">
+				<a>Go to articles</a>
+			</Link>
+			{/* <Nav.Item>
 				<Link href="/index">
 					<a>Home</a>
 				</Link>
@@ -18,7 +22,7 @@ function Navigationbar() {
 				<Link href="/contact">
 					<a>Contact</a>
 				</Link>
-			</Nav.Item>
+			</Nav.Item> */}
 		</div>
 	);
 }

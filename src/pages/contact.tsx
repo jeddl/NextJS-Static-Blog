@@ -1,3 +1,4 @@
+import React from "react";
 import Navigationbar from "./navbar";
 
 export default function Contact() {
