@@ -4,24 +4,21 @@ import Link from "next/Link";
 function Navigationbar() {
 	return (
 		<div>
-			<Link href="/article/[slug]" as="/article/test">
-				<a>Go to articles</a>
-			</Link>
-			{/* <Nav.Item>
+			<li>
 				<Link href="/index">
 					<a>Home</a>
 				</Link>
-			</Nav.Item>
-			<Nav.Item>
-				<Link href="/articles">
-					<a>Ariticles</a>
+			</li>
+			<li>
+				<Link href="/article/[slug]" as="/article/test">
+					<a>Go to articles</a>
 				</Link>
-			</Nav.Item>
-			<Nav.Item>
-				<Link href="/contact">
+			</li>
+			<li>
+				<Link href="/contact" as="/contact">
 					<a>Contact</a>
 				</Link>
-			</Nav.Item> */}
+			</li>
 		</div>
 	);
 }

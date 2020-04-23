@@ -10,7 +10,6 @@ export default Post;
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const files = fs.readdirSync("src/contents/articles");
-	console.log(files);
 	return {
 		paths: files.map(filename => ({
 			params: {
