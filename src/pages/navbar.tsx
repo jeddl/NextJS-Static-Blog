@@ -5,7 +5,7 @@ import Link from "next/Link";
 function Navigationbar() {
 	return (
 		<div>
-			<Link href="/a">
+			<Link href="/article/[slug]" as="/article/test">
 				<a>Go to articles</a>
 			</Link>
 			{/* <Nav.Item>
