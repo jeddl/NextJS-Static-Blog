@@ -1,3 +1,11 @@
 export default interface Article {
-	slug: string;
+	metadata: Metadata;
+	contents: string;
+}
+
+export interface Metadata {
+	title: string;
+	timestamp: string;
+	tag: string;
+	description: string;
 }
