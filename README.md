@@ -1,1 +1,3 @@
 # MetaJeDD
+
+Static Blog
