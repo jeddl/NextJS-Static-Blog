@@ -5,7 +5,8 @@ import Article from "../../interfaces/article";
 import path from "path";
 import matter from "gray-matter";
 import Head from "next/head";
-import marked from "marked";
+import ReactMarkdown from "react-markdown";
+import CodeBlock from "../../components/CodeBlock";
 
 const Post: React.FunctionComponent<Article> = ({contents, metadata}) => {
 	return (
@@ -13,7 +14,7 @@ const Post: React.FunctionComponent<Article> = ({contents, metadata}) => {
 			<Head>
 				<title>{metadata.title}</title>
 			</Head>
-			<div dangerouslySetInnerHTML={{__html: contents}} />
+			<ReactMarkdown source={contents} renderers={{code: CodeBlock}} />
 		</>
 	);
 };
@@ -42,10 +43,9 @@ export const getStaticProps: GetStaticProps = async ctx => {
 		.readFileSync(path.join("pages", "articles", "contents", filename + ".md"))
 		.toString();
 	const parsed = matter(markdownMetaData);
-	const parsedHtml = marked(parsed.content);
 	return {
 		props: {
-			contents: parsedHtml,
+			contents: parsed.content, //parsedHtml,
 			metadata: parsed.data,
 		},
 	};
