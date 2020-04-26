@@ -10,7 +10,7 @@ tag: JavaScript
 
 Closure is one of the best features of JavaScript. It is essentially a function inside another function where the inner function has the ability to expose its variables to the calls. Meaning it has access to all the variables defined outside of the function. Here is the simple example for a closure:
 
-```javascript
+```js
 function myClosure(text) {
     var message = "Hello ";
     function sayHello() {

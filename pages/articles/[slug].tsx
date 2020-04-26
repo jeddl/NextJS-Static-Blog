@@ -38,14 +38,14 @@ export const getStaticProps: GetStaticProps = async ctx => {
 		return {props: {}};
 	}
 	const {slug} = ctx.params;
-	const filename = slug instanceof Array ? slug.join() : slug;
+	const filename = slug.toString();
 	const markdownMetaData = fs
 		.readFileSync(path.join("pages", "articles", "contents", filename + ".md"))
 		.toString();
 	const parsed = matter(markdownMetaData);
 	return {
 		props: {
-			contents: parsed.content, //parsedHtml,
+			contents: parsed.content,
 			metadata: parsed.data,
 		},
 	};
