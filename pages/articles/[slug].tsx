@@ -7,14 +7,21 @@ import matter from "gray-matter";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "../../components/CodeBlock";
+import Navbar from "../../components/Navbar";
+import TopLevelContainer from "../../components/TopLevelContainer";
 
 const Post: React.FunctionComponent<Article> = ({contents, metadata}) => {
 	return (
 		<>
-			<Head>
-				<title>{metadata.title}</title>
-			</Head>
-			<ReactMarkdown source={contents} renderers={{code: CodeBlock}} />
+			<div>
+				<Head>
+					<title>{metadata.title}</title>
+				</Head>
+				<Navbar title="Aritile" />
+				<TopLevelContainer title={metadata.title}>
+					<ReactMarkdown source={contents} renderers={{code: CodeBlock}} />
+				</TopLevelContainer>
+			</div>
 		</>
 	);
 };
