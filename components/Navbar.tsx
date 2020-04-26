@@ -1,15 +1,9 @@
 import * as React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Props from "../interfaces/props";
 
-type Props = {
-	title?: string;
-};
-
-const Layout: React.FunctionComponent<Props> = ({
-	children,
-	title = "MetaJeDD",
-}) => (
+const Navbar: React.FunctionComponent<Props> = ({title = "MetaJeDD"}) => (
 	<div>
 		<Head>
 			<title>{title}</title>
@@ -26,17 +20,12 @@ const Layout: React.FunctionComponent<Props> = ({
 					<a>Articles</a>
 				</Link>{" "}
 				|{" "}
-				<Link href="/about">
-					<a>About</a>
+				<Link href="/contact">
+					<a>Contact</a>
 				</Link>{" "}
 			</nav>
 		</header>
-		{children}
-		<footer>
-			<hr />
-			<span>Footer Placeholder</span>
-		</footer>
 	</div>
 );
 
-export default Layout;
+export default Navbar;

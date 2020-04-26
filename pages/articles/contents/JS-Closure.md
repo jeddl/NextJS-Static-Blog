@@ -1,7 +1,7 @@
 ---
 title: JavaScript - Closure and Variable Scope
 timestamp: 4/30/2018
-tag: JavaScript
+tag: Coding
 ---
 
 # JavaScript: Closure and Variable Scope

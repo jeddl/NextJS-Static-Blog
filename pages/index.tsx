@@ -1,10 +1,13 @@
-import Layout from "../components/Layout";
+import Navbar from "../components/Navbar";
+import TopLevelContainer from "../components/TopLevelContainer";
 
 const IndexPage = () => (
-	<Layout title="Home | MetaJeDD">
-		<h1>👋 Hello 👋</h1>
-		<p>Home Page</p>
-	</Layout>
+	<>
+		<Navbar title="Home | MetaJeDD"></Navbar>
+		<TopLevelContainer title="Home">
+			<h1>👋 Hello 👋</h1>
+		</TopLevelContainer>
+	</>
 );
 
 export default IndexPage;
