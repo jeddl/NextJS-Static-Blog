@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport { Prism as SyntaxHighlighter } from \"react-syntax-highlighter\";\n\nconst CodeBlock = ({\n  value,\n  language\n}) => {\n  return __jsx(SyntaxHighlighter, {\n    language: language\n  }, value);\n};\n\nexport default CodeBlock;","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport Layout from \"../components/Layout\";\n\nconst IndexPage = () => __jsx(Layout, {\n  title: \"Home | MetaJeDD\"\n}, __jsx(\"h1\", null, \" Hello \\uD83D\\uDC4B\"), __jsx(\"p\", null, \"Home Page\"));\n\nexport default IndexPage;","map":null,"metadata":{},"sourceType":"module"}

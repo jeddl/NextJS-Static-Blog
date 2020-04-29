@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport Navbar from \"../components/Navbar\";\n\nvar ContactPage = function ContactPage() {\n  return __jsx(\"div\", null, __jsx(Navbar, {\n    title: \"Contact\"\n  }), __jsx(\"h1\", null, \"Contact me\"));\n};\n\nexport default ContactPage;","map":null,"metadata":{},"sourceType":"module"}
