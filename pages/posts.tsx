@@ -2,21 +2,24 @@ import Navbar from "../components/Navbar";
 import {GetStaticProps} from "next";
 import fs from "fs";
 import path from "path";
-import Files from "../interfaces/files";
 import Link from "next/link";
 import TopLevelContainer from "../components/TopLevelContainer";
+import matter from "gray-matter";
 
-const Articles: React.FunctionComponent<Files> = ({filenames}) => (
+const Articles = ({titleWithFilenames}) => (
 	<>
 		<Navbar title="Articles"></Navbar>
 		<TopLevelContainer title="Articles">
 			<h1> Articles </h1>
 			<div>
-				{filenames.map(filename => {
+				{titleWithFilenames.map(titleWithFilename => {
 					return (
-						<li key="filename">
-							<Link href="/articles/[slug]" as={"/articles/" + filename}>
-								<a>{filename}</a>
+						<li key={titleWithFilename["filename"]}>
+							<Link
+								href="/articles/[slug]"
+								as={"/articles/" + titleWithFilename["filename"]}
+							>
+								<a>{titleWithFilename["title"]}</a>
 							</Link>
 						</li>
 					);
@@ -29,10 +32,23 @@ const Articles: React.FunctionComponent<Files> = ({filenames}) => (
 export default Articles;
 
 export const getStaticProps: GetStaticProps = async () => {
-	const files = fs.readdirSync(path.join("pages", "articles", "contents"));
+	const dirPath = path.join("pages", "articles", "contents");
+	const files = fs.readdirSync(dirPath);
+
+	const metadatas = files
+		.map(filename => fs.readFileSync(path.join(dirPath, filename)).toString())
+		.map(data => matter(data).data);
+	const titles = metadatas.map(metadata => metadata.title);
+	let titleWithFilenames: {}[] = [];
+	for (let i = 0; i < titles.length; i++) {
+		titleWithFilenames.push({
+			title: titles[i],
+			filename: files[i].replace(".md", ""),
+		});
+	}
 	return {
 		props: {
-			filenames: files.map(filename => filename.replace(".md", "")),
+			titleWithFilenames: titleWithFilenames,
 		},
 	};
 };
