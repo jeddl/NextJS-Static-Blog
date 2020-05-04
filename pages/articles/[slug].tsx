@@ -1,14 +1,12 @@
-import fs from "fs";
 import {GetStaticPaths, GetStaticProps} from "next";
 import React from "react";
 import Article from "../../interfaces/article";
-import path from "path";
-import matter from "gray-matter";
 import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "../../components/CodeBlock";
 import Navbar from "../../components/Navbar";
 import TopLevelContainer from "../../components/TopLevelContainer";
+import getFilenames, {getFileContentWithMeta} from "../../usecases/getFileInfo";
 
 const Post: React.FunctionComponent<Article> = ({contents, metadata}) => {
 	return (
@@ -29,11 +27,11 @@ const Post: React.FunctionComponent<Article> = ({contents, metadata}) => {
 export default Post;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const files = fs.readdirSync(path.join("pages", "articles", "contents"));
+	const filenames = getFilenames();
 	return {
-		paths: files.map(filename => ({
+		paths: filenames.map(filename => ({
 			params: {
-				slug: filename.replace(".md", ""),
+				slug: filename,
 			},
 		})),
 		fallback: false,
@@ -45,11 +43,7 @@ export const getStaticProps: GetStaticProps = async ctx => {
 		return {props: {}};
 	}
 	const {slug} = ctx.params;
-	const filename = slug.toString();
-	const markdownMetaData = fs
-		.readFileSync(path.join("pages", "articles", "contents", filename + ".md"))
-		.toString();
-	const parsed = matter(markdownMetaData);
+	const parsed = getFileContentWithMeta(slug)[0];
 	return {
 		props: {
 			contents: parsed.content,

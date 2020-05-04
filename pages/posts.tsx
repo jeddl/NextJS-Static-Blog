@@ -1,10 +1,8 @@
 import Navbar from "../components/Navbar";
 import {GetStaticProps} from "next";
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import TopLevelContainer from "../components/TopLevelContainer";
-import matter from "gray-matter";
+import getFilenames, {getFileContentWithMeta} from "../usecases/getFileInfo";
 
 const Articles = ({titleWithFilenames}) => (
 	<>
@@ -32,12 +30,9 @@ const Articles = ({titleWithFilenames}) => (
 export default Articles;
 
 export const getStaticProps: GetStaticProps = async () => {
-	const dirPath = path.join("pages", "articles", "contents");
-	const files = fs.readdirSync(dirPath);
+	const files = getFilenames();
 
-	const metadatas = files
-		.map(filename => fs.readFileSync(path.join(dirPath, filename)).toString())
-		.map(data => matter(data).data);
+	const metadatas = getFileContentWithMeta(files).map(allData => allData.data);
 	const titles = metadatas.map(metadata => metadata.title);
 	let titleWithFilenames: {}[] = [];
 	for (let i = 0; i < titles.length; i++) {
