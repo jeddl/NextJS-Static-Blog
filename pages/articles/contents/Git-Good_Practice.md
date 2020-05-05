@@ -1,3 +1,8 @@
+---
+title: Git - Good Practice
+timestamp: 4/10/2018
+tag: Coding
+---
 
 # Git Good Practice
 
