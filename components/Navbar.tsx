@@ -2,8 +2,9 @@ import * as React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Props from "../interfaces/props";
+import LinkButtons from "../pages/styles/LinkButton";
 
-const Navbar: React.FunctionComponent<Props> = ({title = "MetaJeDD"}) => (
+const Navbar: React.FunctionComponent<Props> = ({ title = "MetaJeDD" }) => (
 	<div>
 		<Head>
 			<title>{title}</title>
@@ -12,17 +13,15 @@ const Navbar: React.FunctionComponent<Props> = ({title = "MetaJeDD"}) => (
 		</Head>
 		<header>
 			<nav>
-				<Link href="/">
-					<a>Home</a>
-				</Link>{" "}
-				|{" "}
-				<Link href="/posts">
-					<a>Articles</a>
-				</Link>{" "}
-				|{" "}
-				<Link href="/contact">
-					<a>Contact</a>
-				</Link>{" "}
+				<Link href="/" passHref>
+					<LinkButtons>Home</LinkButtons>
+				</Link>
+				<Link href="/posts" passHref>
+					<LinkButtons>Articles</LinkButtons>
+				</Link>
+				<Link href="/contact" passHref>
+					<LinkButtons>Contact</LinkButtons>
+				</Link>
 			</nav>
 		</header>
 	</div>
