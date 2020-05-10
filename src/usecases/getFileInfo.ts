@@ -2,12 +2,12 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const dirPath = path.join("pages", "articles", "contents");
+const dirPath = path.join("src", "pages", "articles", "contents");
 
 const getFilenames = (): string[] => {
 	const files = fs.readdirSync(dirPath);
 
-	return files.map(filename => filename.replace(".md", ""));
+	return files.map((filename) => filename.replace(".md", ""));
 };
 
 export default getFilenames;
@@ -21,10 +21,10 @@ export const getFileContentWithMeta = (filenames: string | string[]) => {
 	}
 
 	const markdownWithMetadata = filenameList
-		.map(filename =>
+		.map((filename) =>
 			fs.readFileSync(path.join(dirPath, filename + ".md")).toString()
 		)
-		.map(data => matter(data));
+		.map((data) => matter(data));
 
 	return markdownWithMetadata;
 };

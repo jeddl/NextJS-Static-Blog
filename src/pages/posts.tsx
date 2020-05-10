@@ -6,9 +6,9 @@ import getFilenames, { getFileContentWithMeta } from "../usecases/getFileInfo";
 
 const Articles = ({ titleWithFilenames }) => (
 	<>
+		<Navbar title="Articles"></Navbar>
 		<TopLevelContainer title="Articles">
 			<div>
-				<Navbar title="Articles"></Navbar>
 				<h1> Articles </h1>
 				<div>
 					{titleWithFilenames.map((titleWithFilename) => {
