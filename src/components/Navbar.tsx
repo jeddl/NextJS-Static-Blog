@@ -2,25 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Props from "../interfaces/props";
-// import StyledBreadcrumb from "../pages/styles/NavbarStyle";
+import styles from "./styles/NavLink";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
-// import HomeIcon from "@material-ui/icons/Home";
-
-// const CustomizedBreadcrumbs = React.forwardRef<
-// 	HTMLButtonElement,
-// 	React.HTMLProps<HTMLButtonElement>
-// >(({ href, onClick, children }, ref) => {
-// 	return (
-// 		<StyledBreadcrumb
-// 			component="a"
-// 			href={href}
-// 			label={children}
-// 			// icon={<HomeIcon fontSize="small" />}
-// 			onClick={() => onClick}
-// 			ref={() => ref}
-// 		/>
-// 	);
-// });
 
 const Navbar: React.FunctionComponent<Props> = ({ title = "MetaJeDD" }) => {
 	return (
@@ -33,13 +16,13 @@ const Navbar: React.FunctionComponent<Props> = ({ title = "MetaJeDD" }) => {
 			<header>
 				<Breadcrumbs aria-label="breadcrumb">
 					<Link href="/">
-						<a style={{ textDecoration: "none" }}>Home</a>
+						<a style={styles.root}>Home</a>
 					</Link>
 					<Link href="/posts">
-						<a style={{ textDecoration: "none" }}>Articles</a>
+						<a style={styles.root}>Articles</a>
 					</Link>
 					<Link href="/contact">
-						<a style={{ textDecoration: "none" }}>Contact</a>
+						<a style={styles.root}>Contact</a>
 					</Link>
 				</Breadcrumbs>
 			</header>
