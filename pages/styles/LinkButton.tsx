@@ -6,8 +6,13 @@ const LinkButtons = forwardRef<
 	React.HTMLProps<HTMLButtonElement>
 >((props, ref) => {
 	return (
-		<a onClick={() => props.onClick} href={props.href} ref={() => ref}>
-			<Button>{props.children}</Button>
+		<a
+			onClick={() => props.onClick}
+			href={props.href}
+			ref={() => ref}
+			style={{ textDecoration: "none" }}
+		>
+			<Button color="primary">{props.children}</Button>
 		</a>
 	);
 });
