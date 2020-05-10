@@ -3,10 +3,9 @@ import Link from "next/link";
 import Head from "next/head";
 import Props from "../interfaces/props";
 import LinkButtons from "../pages/styles/LinkButton";
-import myStyles from "../pages/styles/MyStyle";
 
 const Navbar: React.FunctionComponent<Props> = ({ title = "MetaJeDD" }) => (
-	<div style={myStyles}>
+	<div>
 		<Head>
 			<title>{title}</title>
 			<meta charSet="utf-8" />
