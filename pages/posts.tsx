@@ -7,21 +7,23 @@ import getFilenames, { getFileContentWithMeta } from "../usecases/getFileInfo";
 const Articles = ({ titleWithFilenames }) => (
 	<>
 		<TopLevelContainer title="Articles">
-			<Navbar title="Articles"></Navbar>
-			<h1> Articles </h1>
 			<div>
-				{titleWithFilenames.map((titleWithFilename) => {
-					return (
-						<li key={titleWithFilename["filename"]}>
-							<Link
-								href="/articles/[slug]"
-								as={"/articles/" + titleWithFilename["filename"]}
-							>
-								<a>{titleWithFilename["title"]}</a>
-							</Link>
-						</li>
-					);
-				})}
+				<Navbar title="Articles"></Navbar>
+				<h1> Articles </h1>
+				<div>
+					{titleWithFilenames.map((titleWithFilename) => {
+						return (
+							<li key={titleWithFilename["filename"]}>
+								<Link
+									href="/articles/[slug]"
+									as={"/articles/" + titleWithFilename["filename"]}
+								>
+									<a>{titleWithFilename["title"]}</a>
+								</Link>
+							</li>
+						);
+					})}
+				</div>
 			</div>
 		</TopLevelContainer>
 	</>

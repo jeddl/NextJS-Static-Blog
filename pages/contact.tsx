@@ -5,8 +5,10 @@ import TopLevelContainer from "../components/TopLevelContainer";
 const ContactPage: React.FunctionComponent = () => (
 	<div>
 		<TopLevelContainer title="Contact">
-			<Navbar title="Contact" />
-			<h1>Contact me</h1>
+			<div>
+				<Navbar title="Contact" />
+				<h1>Contact me</h1>
+			</div>
 		</TopLevelContainer>
 	</div>
 );
