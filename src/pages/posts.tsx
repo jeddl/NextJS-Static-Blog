@@ -6,8 +6,8 @@ import getFilenames, { getFileContentWithMeta } from "../usecases/getFileInfo";
 
 const Articles = ({ titleWithFilenames }) => (
 	<>
-		<Navbar title="Articles"></Navbar>
 		<TopLevelContainer title="Articles">
+			<Navbar title="Articles"></Navbar>
 			<div>
 				<h1> Articles </h1>
 				<div>

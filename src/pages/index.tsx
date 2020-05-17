@@ -4,8 +4,8 @@ import TopLevelContainer from "../components/TopLevelContainer";
 const IndexPage = () => {
 	return (
 		<>
-			<Navbar title="Home | MetaJeDD"></Navbar>
 			<TopLevelContainer title="Index">
+				<Navbar title="Home | MetaJeDD"></Navbar>
 				<div>
 					<h1>👋 Hello 👋</h1>
 					<p>
