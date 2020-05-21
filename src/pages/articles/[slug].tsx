@@ -9,6 +9,7 @@ import TopLevelContainer from "../../components/TopLevelContainer";
 import getFilenames, {
 	getFileContentWithMeta,
 } from "../../usecases/getFileInfo";
+import ContentDiv from "../../components/styles/ContentDiv";
 
 const Post: React.FunctionComponent<Article> = ({ contents, metadata }) => {
 	return (
@@ -19,7 +20,9 @@ const Post: React.FunctionComponent<Article> = ({ contents, metadata }) => {
 				</Head>
 				<TopLevelContainer title={metadata.title}>
 					<Navbar title="Aritile" />
-					<ReactMarkdown source={contents} renderers={{ code: CodeBlock }} />
+					<ContentDiv>
+						<ReactMarkdown source={contents} renderers={{ code: CodeBlock }} />
+					</ContentDiv>
 				</TopLevelContainer>
 			</div>
 		</>

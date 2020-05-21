@@ -60,7 +60,7 @@ $ git checkout -b <WORKING BRANCH NAME>
 
 And now you can start implementation.
 
-## Solve Your Merge Conflicts and Push Your Changes
+## Resolve Your Merge Conflicts and Push Your Changes
 
 After the implementation is done, you are about to push your code. Now you need to commit your code first:
 

@@ -2,13 +2,14 @@ import Navbar from "../components/Navbar";
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import TopLevelContainer from "../components/TopLevelContainer";
+import ContentDiv from "../components/styles/ContentDiv";
 import getFilenames, { getFileContentWithMeta } from "../usecases/getFileInfo";
 
 const Articles = ({ titleWithFilenames }) => (
 	<>
 		<TopLevelContainer title="Articles">
 			<Navbar title="Articles"></Navbar>
-			<div>
+			<ContentDiv>
 				<h1> Articles </h1>
 				<div>
 					{titleWithFilenames.map((titleWithFilename) => {
@@ -24,7 +25,7 @@ const Articles = ({ titleWithFilenames }) => (
 						);
 					})}
 				</div>
-			</div>
+			</ContentDiv>
 		</TopLevelContainer>
 	</>
 );

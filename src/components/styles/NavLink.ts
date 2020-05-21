@@ -13,7 +13,3 @@ const StyledLink = styled.a`
 `;
 
 export default StyledLink;
-
-export const StyledDiv = styled.div`
-	text-align: right;
-`;
