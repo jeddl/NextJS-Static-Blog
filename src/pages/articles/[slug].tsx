@@ -9,9 +9,12 @@ import TopLevelContainer from "../../components/TopLevelContainer";
 import getFilenames, {
 	getFileContentWithMeta,
 } from "../../usecases/getFileInfo";
-import ContentDiv from "../../components/styles/ContentDiv";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import useGrid from "../../components/styles/PageGrid";
 
 const Post: React.FunctionComponent<Article> = ({ contents, metadata }) => {
+	const classes = useGrid();
 	return (
 		<>
 			<div>
@@ -19,10 +22,19 @@ const Post: React.FunctionComponent<Article> = ({ contents, metadata }) => {
 					<title>{metadata.title}</title>
 				</Head>
 				<TopLevelContainer title={metadata.title}>
-					<Navbar title="Aritile" />
-					<ContentDiv>
-						<ReactMarkdown source={contents} renderers={{ code: CodeBlock }} />
-					</ContentDiv>
+					<Grid item xs={10} className={classes.nav}>
+						<Paper className={classes.paper}>
+							<Navbar title="Aritile" />
+						</Paper>
+					</Grid>
+					<Grid item xs={10} className={classes.root}>
+						<Paper className={classes.paper}>
+							<ReactMarkdown
+								source={contents}
+								renderers={{ code: CodeBlock }}
+							/>
+						</Paper>
+					</Grid>
 				</TopLevelContainer>
 			</div>
 		</>

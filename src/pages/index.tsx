@@ -1,20 +1,29 @@
 import Navbar from "../components/Navbar";
 import TopLevelContainer from "../components/TopLevelContainer";
-import ContentDiv from "../components/styles/ContentDiv";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import useGrid from "../components/styles/PageGrid";
 
 const IndexPage = () => {
+	const classes = useGrid();
 	return (
 		<>
 			<TopLevelContainer title="Index">
-				<Navbar title="Home | MetaJeDD"></Navbar>
-				<ContentDiv>
-					<h1>👋 Hello 👋</h1>
-					<p>
-						This is a tech blog where I want to share my experience as a
-						software engineer.
-					</p>
-					<p>No more BS.</p>
-				</ContentDiv>
+				<Grid item xs={10} className={classes.nav}>
+					<Paper className={classes.paper}>
+						<Navbar title="Home | MetaJeDD"></Navbar>
+					</Paper>
+				</Grid>
+				<Grid item xs={10} className={classes.root}>
+					<Paper className={classes.paper}>
+						<h1>👋 Hello 👋</h1>
+						<p>
+							This is a tech blog where I want to share my experience as a
+							software engineer.
+						</p>
+						<p>No more BS.</p>
+					</Paper>
+				</Grid>
 			</TopLevelContainer>
 		</>
 	);
