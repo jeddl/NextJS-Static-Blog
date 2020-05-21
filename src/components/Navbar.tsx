@@ -18,7 +18,7 @@ const Navbar: React.FunctionComponent<Props> = ({ title = "MetaJeDD" }) => {
 			<header>
 				<Box
 					marginTop="2rem"
-					marginLeft="25rem"
+					marginLeft="45rem"
 					marginBottom="2rem"
 					marginRight="5rem"
 				>
