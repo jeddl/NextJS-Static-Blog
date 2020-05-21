@@ -3,6 +3,7 @@ import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 const useGrid = makeStyles((theme: Theme) =>
 	createStyles({
 		nav: {
+			marginTop: "2rem",
 			marginLeft: "6rem",
 			// textAlign: "right",
 		},

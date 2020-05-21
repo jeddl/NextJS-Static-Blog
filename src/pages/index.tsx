@@ -10,9 +10,7 @@ const IndexPage = () => {
 		<>
 			<TopLevelContainer title="Index">
 				<Grid item xs={10} className={classes.nav}>
-					<Paper className={classes.paper}>
-						<Navbar title="Home | MetaJeDD"></Navbar>
-					</Paper>
+					<Navbar title="Home | MetaJeDD"></Navbar>
 				</Grid>
 				<Grid item xs={10} className={classes.root}>
 					<Paper className={classes.paper}>

@@ -23,9 +23,7 @@ const Post: React.FunctionComponent<Article> = ({ contents, metadata }) => {
 				</Head>
 				<TopLevelContainer title={metadata.title}>
 					<Grid item xs={10} className={classes.nav}>
-						<Paper className={classes.paper}>
-							<Navbar title="Aritile" />
-						</Paper>
+						<Navbar title="Aritile" />
 					</Grid>
 					<Grid item xs={10} className={classes.root}>
 						<Paper className={classes.paper}>
