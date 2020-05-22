@@ -9,7 +9,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../Theme";
 
-export default function MyApp(props: AppProps) {
+export default function MetajeDD(props: AppProps) {
 	const { Component, pageProps } = props;
 
 	React.useEffect(() => {
@@ -23,7 +23,7 @@ export default function MyApp(props: AppProps) {
 	return (
 		<React.Fragment>
 			<Head>
-				<title>My page</title>
+				<title>MetaJeDD</title>
 				<meta
 					name="viewport"
 					content="minimum-scale=1, initial-scale=1, width=device-width"
