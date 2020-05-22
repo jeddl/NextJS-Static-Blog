@@ -12,6 +12,7 @@ import getFilenames, {
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import useGrid from "../../components/styles/PageGrid";
+import FixedDiv from "../../components/styles/FixDiv";
 
 const Post: React.FunctionComponent<Article> = ({ contents, metadata }) => {
 	const classes = useGrid();
@@ -22,10 +23,12 @@ const Post: React.FunctionComponent<Article> = ({ contents, metadata }) => {
 					<title>{metadata.title}</title>
 				</Head>
 				<TopLevelContainer title={metadata.title}>
-					<Grid item xs={10} className={classes.nav}>
-						<Navbar title="Aritile" />
+					<Grid item xs={12} className={classes.nav}>
+						<FixedDiv>
+							<Navbar title="Aritile" />
+						</FixedDiv>
 					</Grid>
-					<Grid item xs={10} className={classes.root}>
+					<Grid item xs={12} className={classes.root}>
 						<Paper className={classes.paper}>
 							<ReactMarkdown
 								source={contents}

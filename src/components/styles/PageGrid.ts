@@ -4,17 +4,16 @@ const useGrid = makeStyles((theme: Theme) =>
 	createStyles({
 		nav: {
 			marginTop: "2rem",
-			marginLeft: "6rem",
-			// textAlign: "right",
+			marginBottom: "2rem",
+			backgroundColor: "white",
 		},
 		root: {
-			marginLeft: "6rem",
+			marginLeft: "1rem",
+			marginRight: "1rem",
 		},
 		paper: {
-			// marginLeft: "0rem",
 			padding: theme.spacing(2),
-			// textAlign: "center",
-			// color: theme.palette.text.secondary,
+			color: theme.palette.text.primary,
 		},
 	})
 );

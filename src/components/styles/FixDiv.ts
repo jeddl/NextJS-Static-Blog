@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const FixedDiv = styled.div`
-	overflow: hidden;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 	position: fixed;
 	top: 0;
 	background-color: white;
+	width: 70%;
 `;
 
 export default FixedDiv;

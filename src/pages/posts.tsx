@@ -5,16 +5,19 @@ import TopLevelContainer from "../components/TopLevelContainer";
 import getFilenames, { getFileContentWithMeta } from "../usecases/getFileInfo";
 import Grid from "@material-ui/core/Grid";
 import useGrid from "../components/styles/PageGrid";
+import FixedDiv from "../components/styles/FixDiv";
 
 const Articles = ({ titleWithFilenames }) => {
 	const classes = useGrid();
 	return (
 		<>
 			<TopLevelContainer title="Articles">
-				<Grid item xs={10} className={classes.nav}>
-					<Navbar title="Articles"></Navbar>
+				<Grid item xs={12} className={classes.nav}>
+					<FixedDiv>
+						<Navbar title="Aritile" />
+					</FixedDiv>
 				</Grid>
-				<Grid item xs={10} className={classes.root}>
+				<Grid item xs={6} className={classes.root}>
 					<h1> Articles </h1>
 					<div>
 						{titleWithFilenames.map((titleWithFilename) => {
