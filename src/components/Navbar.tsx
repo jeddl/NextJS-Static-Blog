@@ -13,7 +13,6 @@ const Navbar: React.FunctionComponent<Props> = ({ title = "MetaJeDD" }) => {
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
-			{/* <header> */}
 			<Breadcrumbs aria-label="breadcrumb">
 				<Link href="/" passHref>
 					<StyledLink>Home</StyledLink>
@@ -25,7 +24,6 @@ const Navbar: React.FunctionComponent<Props> = ({ title = "MetaJeDD" }) => {
 								<StyledLink>Contact</StyledLink>
 							</Link> */}
 			</Breadcrumbs>
-			{/* </header> */}
 		</div>
 	);
 };
