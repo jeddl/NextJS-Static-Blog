@@ -37,11 +37,9 @@ const Articles = ({ titleWithFilenames }) => {
 										as={"/articles/" + titleWithFilename["filename"]}
 										passHref
 									>
-										<StyledLink>
-											<DivWrapper>
-												<div>{titleWithFilename["title"]}</div>
-											</DivWrapper>
-										</StyledLink>
+										<DivWrapper>
+											<StyledLink>{titleWithFilename["title"]}</StyledLink>
+										</DivWrapper>
 									</Link>
 								</ListItem>
 							);

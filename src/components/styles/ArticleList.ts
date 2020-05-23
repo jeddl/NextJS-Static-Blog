@@ -25,4 +25,7 @@ export const DivWrapper = styled.div`
 	overflow: hidden;
 	width: 40rem;
 	margin: 1rem 1rem 1rem -2rem;
+	&:hover {
+		color: gray;
+	}
 `;
