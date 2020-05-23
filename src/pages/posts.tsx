@@ -10,6 +10,8 @@ import {
 	ListRoot,
 	ListItem,
 	StyledLink,
+	DivWrapper,
+	TitleDiv,
 } from "../components/styles/ArticleList";
 
 const Articles = ({ titleWithFilenames }) => {
@@ -23,7 +25,9 @@ const Articles = ({ titleWithFilenames }) => {
 					</FixedDiv>
 				</Grid>
 				<Grid item xs={6} className={classes.root}>
-					<h1> Articles </h1>
+					<TitleDiv>
+						<h1> Articles </h1>
+					</TitleDiv>
 					<ListRoot>
 						{titleWithFilenames.map((titleWithFilename) => {
 							return (
@@ -33,7 +37,11 @@ const Articles = ({ titleWithFilenames }) => {
 										as={"/articles/" + titleWithFilename["filename"]}
 										passHref
 									>
-										<StyledLink>{titleWithFilename["title"]}</StyledLink>
+										<StyledLink>
+											<DivWrapper>
+												<div>{titleWithFilename["title"]}</div>
+											</DivWrapper>
+										</StyledLink>
 									</Link>
 								</ListItem>
 							);
