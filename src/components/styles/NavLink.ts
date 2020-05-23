@@ -7,9 +7,6 @@ const StyledLink = styled.a`
 		text-decoration: none;
 		color: black;
 	}
-	&.active {
-		color: red;
-	}
 `;
 
 export default StyledLink;

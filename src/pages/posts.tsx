@@ -6,6 +6,11 @@ import getFilenames, { getFileContentWithMeta } from "../usecases/getFileInfo";
 import Grid from "@material-ui/core/Grid";
 import useGrid from "../components/styles/PageGrid";
 import FixedDiv from "../components/styles/FixDiv";
+import {
+	ListRoot,
+	ListItem,
+	StyledLink,
+} from "../components/styles/ArticleList";
 
 const Articles = ({ titleWithFilenames }) => {
 	const classes = useGrid();
@@ -19,20 +24,21 @@ const Articles = ({ titleWithFilenames }) => {
 				</Grid>
 				<Grid item xs={6} className={classes.root}>
 					<h1> Articles </h1>
-					<div>
+					<ListRoot>
 						{titleWithFilenames.map((titleWithFilename) => {
 							return (
-								<li key={titleWithFilename["filename"]}>
+								<ListItem key={titleWithFilename["filename"]}>
 									<Link
 										href="/articles/[slug]"
 										as={"/articles/" + titleWithFilename["filename"]}
+										passHref
 									>
-										<a>{titleWithFilename["title"]}</a>
+										<StyledLink>{titleWithFilename["title"]}</StyledLink>
 									</Link>
-								</li>
+								</ListItem>
 							);
 						})}
-					</div>
+					</ListRoot>
 				</Grid>
 			</TopLevelContainer>
 		</>
