@@ -34,7 +34,7 @@ const Post: React.FunctionComponent<Article> = ({ contents, metadata }) => {
 								source={contents}
 								renderers={{ code: CodeBlock }}
 								transformImageUri={(uri) =>
-									uri.startsWith("http") ? uri : `http://localhost:3000/${uri}`
+									uri.startsWith("https") ? uri : `http://localhost:3000${uri}`
 								}
 							/>
 						</Paper>
