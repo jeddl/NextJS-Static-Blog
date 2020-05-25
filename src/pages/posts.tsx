@@ -32,15 +32,15 @@ const Articles = ({ titleWithFilenames }) => {
 						{titleWithFilenames.map((titleWithFilename) => {
 							return (
 								<ListItem key={titleWithFilename["filename"]}>
-									<Link
-										href="/articles/[slug]"
-										as={"/articles/" + titleWithFilename["filename"]}
-										passHref
-									>
-										<DivWrapper>
+									<DivWrapper>
+										<Link
+											href="/articles/[slug]"
+											as={"/articles/" + titleWithFilename["filename"]}
+											passHref
+										>
 											<StyledLink>{titleWithFilename["title"]}</StyledLink>
-										</DivWrapper>
-									</Link>
+										</Link>
+									</DivWrapper>
 								</ListItem>
 							);
 						})}
