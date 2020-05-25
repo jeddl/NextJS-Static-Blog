@@ -33,6 +33,9 @@ const Post: React.FunctionComponent<Article> = ({ contents, metadata }) => {
 							<ReactMarkdown
 								source={contents}
 								renderers={{ code: CodeBlock }}
+								transformImageUri={(uri) =>
+									uri.startsWith("http") ? uri : `http://localhost:3000${uri}`
+								}
 							/>
 						</Paper>
 					</Grid>

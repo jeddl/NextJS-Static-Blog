@@ -46,13 +46,13 @@ Now poweroff the VM. Select *Tools* and then *Preferences*.
 
 In *Network*, you are able to see the following window but no items in the NAT Networks. Click *Add* button
 
-![](../imgs/VmNetworkSetup/add_vm_network.png)
+![](/static/VmNetworkSetup/add_vm_network.png)
 
 Give it a name, and then leave everything as default.
 
 Go back to Ubuntu VM settings, under *Network*, when you enable *NAT Network*, you should be able to see the one you just created and select it.
 
-![](../imgs/VmNetworkSetup/vm_network_config.png)
+![](/static/VmNetworkSetup/vm_network_config.png)
 
 Now when you start your VM, you can access the Internet.
 
@@ -68,7 +68,7 @@ $ ifconfig
 
 to find out your IP
 
-![](../imgs/VmNetworkSetup/ifconfig.png)
+![](/static/VmNetworkSetup/ifconfig.png)
 
 And then you need to setup you Linux server as the SSH server. Install OpenSSH in your terminal:
 
@@ -85,7 +85,7 @@ $ sudo systemctl status ssh
 
 Go back to VirtualBox Tools *preferences*, under network, click *edit* button to edit the NatNetwork you just created. And click *Port Forwarding*. Fill out the blanks.
 
-![](../imgs/VmNetworkSetup/port_forwarding.png)
+![](/static/VmNetworkSetup/port_forwarding.png)
 
 Note that Host IP will be 127.0.0.1 since this is your local host. Here I use 8022 as my *Host Port* and 22 as *Guest Port*. You might find these port used by other programs on your computer, and if that is the case, use another port. The *Guest IP* is the IP of your VM.
 
