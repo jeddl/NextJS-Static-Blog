@@ -1,0 +1,89 @@
+---
+title: Manjaro - Installation and Configuration
+timestamp: 6/14/2020
+tag: OS
+---
+
+# Manjaro - Installation and Configuration
+
+## Manjaro
+
+I have wanted to install and use Arch or an Arch based Linux distro for a while. So recently I decided to try
+[Manjaro](https://manjaro.org/) out along with [i3](https://i3wm.org/) WM. (I have tried KDE Plasma and GNOME
+as well, but didn't quite like it as I was not trying to configure my entire Linux desktop like Mac or Windows.)
+
+The reason why I chose Manjaro with i3 was:
+
+1. It is Arch based, and I really would like to try one of these rolling release distros.
+2. It is not Arch, which means, for example the Manjaro i3, comes with some feature pre-installed so that I didn't
+have to start from scratch.(Which might be really good those who want to start from 0, and one of the advantage of
+doing it is you will absolutely know your system inside-out)
+3. i3 is fast and keyboard based, also really simple and beautiful(simple is beautiful BTW), which is exactly what
+I need.
+
+## Preparation
+
+I have an old 2013 Macbook pro which was not really active at the moment, so I decided to give it a try regardless
+the bad customization capability of Apple.
+
+Here are some of the details of my machine
+
+```bash
+System:
+  Host: matrix Kernel: 5.6.16-1-MANJARO x86_64 bits: 64 compiler: gcc
+  v: 10.1.0 Desktop: i3 4.18.1 info: i3bar dm: LightDM 1.30.0
+  Distro: Manjaro Linux
+Machine:
+  Type: Laptop System: Apple product: MacBookPro10,2 v: 1.0
+  serial: <filter> Chassis: type: 10 v: Mac-AFD8A9D944EA4843
+Battery:
+  ID-1: BAT0 charge: 35.5 Wh condition: 65.9/73.9 Wh (89%)
+  volts: 12.2/11.2 model: SMP bq20z451 type: Li-ion serial: N/A
+  status: Charging cycles: 936
+CPU:
+  Topology: Dual Core model: Intel Core i5-3210M bits: 64 type: MT MCP
+  arch: Ivy Bridge rev: 9 L2 cache: 3072 KiB
+  flags: avx lm nx pae sse sse2 sse3 sse4_1 sse4_2 ssse3 vmx
+  bogomips: 19961
+  Speed: 1198 MHz min/max: 1200/3100 MHz Core speeds (MHz): 1: 1197
+  2: 1196 3: 1198 4: 1197
+Graphics:
+  Device-1: Intel 3rd Gen Core processor Graphics vendor: Apple
+  driver: i915 v: kernel bus ID: 00:02.0 chip ID: 8086:0166
+  Display: x11 server: X.Org 1.20.8 driver: intel unloaded: modesetting
+  alternate: fbdev,vesa compositor: compton resolution: 2560x1600~60Hz
+  OpenGL: renderer: Mesa DRI Inte HD Graphics 4000 (IVB GT2)
+  v: 4.2 Mesa 20.0.7 compat-v: 3.0 direct render: Yes
+Audio:
+  Device-1: Intel 7 Series/C216 Family High Definition Audio
+  driver: snd_hda_intel v: kernel bus ID: 00:1b.0 chip ID: 8086:1e20
+  Sound Server: ALSA v: k5.6.16-1-MANJARO
+Network:
+  Device-1: Broadcom and subsidiaries NetXtreme BCM57786 Gigabit
+  Ethernet PCIe
+  driver: N/A port: efa0 bus ID: 02:00.0 chip ID: 14e4:16a3
+  Device-2: Broadcom and subsidiaries BCM4331 802.11a/b/g/n
+  vendor: Apple AirPort Extreme driver: wl v: kernel port: efa0
+  bus ID: 03:00.0 chip ID: 14e4:4331
+  IF: wlp3s0 state: up mac: <filter>
+Drives:
+  Local Storage: total: 233.76 GiB used: 11.21 GiB (4.8%)
+  ID-1: /dev/sda vendor: Apple model: SSD SM256E size: 233.76 GiB
+  speed: 6.0 Gb/s serial: <filter> rev: 9A1Q scheme: GPT
+Partition:
+  ID-1: / size: 228.80 GiB used: 11.21 GiB (4.9%) fs: ext4
+  dev: /dev/sda2
+Sensors:
+  System Temperatures: cpu: 52.0 C mobo: N/A
+  Fan Speeds (RPM): N/A
+```
+
+During the configuration, I had some challenges. For example: resolution font size setup, screen flickering, terminal
+powerline fonts setup, terminal switching and etc. So now I am going to talk about some of the fun stuff and hopefully
+it can help other people who have the similar problems.
+
+
+## i3 High-Resolution Screen Font Size Setup
+
+
+

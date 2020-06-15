@@ -70,7 +70,7 @@ to find out your IP
 
 ![](/static/VmNetworkSetup/ifconfig.png)
 
-And then you need to setup you Linux server as the SSH server. Install OpenSSH in your terminal:
+And then you need to setup your Linux server as the SSH server. Install OpenSSH in your terminal:
 
 ```bash
 $ sudo apt install openssh-server
@@ -87,7 +87,7 @@ Go back to VirtualBox Tools *preferences*, under network, click *edit* button to
 
 ![](/static/VmNetworkSetup/port_forwarding.png)
 
-Note that Host IP will be 127.0.0.1 since this is your local host. Here I use 8022 as my *Host Port* and 22 as *Guest Port*. You might find these port used by other programs on your computer, and if that is the case, use another port. The *Guest IP* is the IP of your VM.
+Note that Host IP will be 127.0.0.1 since this is your local host. Here I use 8022 as my *Host Port* and 22 as *Guest Port*. You might find these ports used by other programs on your computer, and if that is the case, use another port. The *Guest IP* is the IP of your VM.
 
 Reboot the VM. Now you should be able to SSH to your VM from your host using password.
 
