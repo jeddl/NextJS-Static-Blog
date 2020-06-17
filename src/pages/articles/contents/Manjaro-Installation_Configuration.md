@@ -83,7 +83,25 @@ powerline fonts setup, terminal switching and etc. So now I am going to talk abo
 it can help other people who have the similar problems.
 
 
-## i3 High-Resolution Screen Font Size Setup
+## High-Resolution Screen DPI and Fonts Setup
 
+I have a retina display which has the resolution of 2560 x 1600. So right after I installed the system, the default font
+size is too small. The .Xresource file is the one that controls the X client applications. It controls the terminal
+preference, e.g. colors, DPIs, and other fun stuff.
 
+I set my `Xft.dpi` as 120, which is really good for me.
 
+```
+Xft.dpi: 120
+```
+
+The fonts can be set up in here as well. For example, I installed `ZSH` as my shell environment with 
+[oh my zsh](https://github.com/ohmyzsh/ohmyzsh). If you have used `oh my zsh` before, then you must know that in order to
+display some ascii symbols, you have to install Powerline. And then you will have to set font family and font size here,
+for both system and terminal, here.
+
+```
+*.font: DejaVu Sans Mono for Powerline:pixelsize=16
+```
+
+...To be continued
