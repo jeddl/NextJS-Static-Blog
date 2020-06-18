@@ -83,7 +83,9 @@ powerline fonts setup, terminal switching and etc. So now I am going to talk abo
 it can help other people who have the similar problems.
 
 
-## High-Resolution Screen DPI and Fonts Setup
+## Dispaly setup
+
+### DPI and Fonts
 
 I have a retina display which has the resolution of 2560 x 1600. So right after I installed the system, the default font
 size is too small. The .Xresource file is the one that controls the X client applications. It controls the terminal
@@ -103,5 +105,42 @@ for both system and terminal, here.
 ```
 *.font: DejaVu Sans Mono for Powerline:pixelsize=16
 ```
+
+Note that rxvt terminal is awesome, but the problem is that it doesn't support emojis very well. I ran in to this issue
+where I wanted to display some emojis from my bash script. I tried several other solutions, the best one that I found is
+`st`, `Simple Terminal` by [suckless](https://st.suckless.org/). There are a lot of repos on Github that help people to
+configure it. Not only can it display unicode, emojis, and other stuff, but it is light and easy to install.
+
+### Transparency and Style
+
+We can set up the window transparency and other styles in .Xresource as well. In my case, for example, the transparency
+of st and other windows can be set up as followed:
+
+```
+*.alpha:        1
+st.alpha:       0.9
+
+```
+
+Where alpha is from 0 to 1, 0 being fully transparent.
+
+Color change can be followed as what has already been in the `.Xresource` file. For example:
+
+```
+*background:                      #222D31
+*foreground:                      #d8d8d8
+*fading:                          8
+*fadeColor:                       black
+*cursorColor:                     #1ABB9B
+*pointerColorBackground:          #2B2C2B
+*pointerColorForeground:          #16A085
+*color0:                          #222D31
+*color8:                          #585858
+
+```
+
+I highly recommend `st` as it is light-weighted, simple to set up, and easy to use. And most importantly, it is suckless!
+
+## Broadcom Wireless Driver
 
 ...To be continued
