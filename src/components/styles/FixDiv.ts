@@ -6,7 +6,7 @@ export const FixedDiv = styled.div`
 	position: fixed;
 	top: 0;
 	background-color: white;
-	width: 70%;
+	width: 100%;
 `;
 
 export default FixedDiv;
