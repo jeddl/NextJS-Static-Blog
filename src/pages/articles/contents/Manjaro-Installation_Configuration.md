@@ -16,7 +16,7 @@ The reason why I chose Manjaro with i3 was:
 
 1. It is Arch based, and I really would like to try one of these rolling release distros.
 2. It is not Arch, which means, for example the Manjaro i3, comes with some feature pre-installed so that I didn't
-have to start from scratch.(Which might be really good those who want to start from 0, and one of the advantage of
+have to start from scratch.(Which might be really good for those who want to start from 0. And one of the advantages of
 doing it is you will absolutely know your system inside-out)
 3. i3 is fast and keyboard based, also really simple and beautiful(simple is beautiful BTW), which is exactly what
 I need.
