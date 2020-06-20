@@ -113,7 +113,7 @@ configure it. Not only can it display unicode, emojis, and other stuff, but it i
 
 ### Transparency and Style
 
-We can set up the window transparency and other styles in .Xresource as well. In my case, for example, the transparency
+We can set up the window transparency and other styles in `.Xresources` as well. In my case, for example, the transparency
 of st and other windows can be set up as followed:
 
 ```
@@ -124,7 +124,7 @@ st.alpha:       0.9
 
 Where alpha is from 0 to 1, 0 being fully transparent.
 
-Color change can be followed as what has already been in the `.Xresource` file. For example:
+Color change can be followed as what has already been in the `.Xresources` file. For example:
 
 ```
 *background:                      #222D31
@@ -141,6 +141,17 @@ Color change can be followed as what has already been in the `.Xresource` file. 
 
 I highly recommend `st` as it is light-weighted, simple to set up, and easy to use. And most importantly, it is suckless!
 
+[Nerd Font](https://www.nerdfonts.com/) works pretty well for both `oh my zsh` and `vim-airline`, and as well symbols,
+emojis, therefore the unicode icons work perfectly in `ranger`, which is also the default file manager on Manjaro i3.
+Highly recommended!
+
 ## Broadcom Wireless Driver
 
+
+## Email, Calendar and PDF Reader
+
+
+## Resources and References
+
 ...To be continued
+
