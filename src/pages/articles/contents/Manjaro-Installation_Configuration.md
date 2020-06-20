@@ -141,7 +141,7 @@ Color change can be followed as what has already been in the `.Xresources` file.
 
 I highly recommend `st` as it is light-weighted, simple to set up, and easy to use. And most importantly, it is suckless!
 
-[Nerd Font](https://www.nerdfonts.com/) works pretty well for both `oh my zsh` and `vim-airline`, and as well symbols,
+[Nerd Font](https://www.nerdfonts.com/) works pretty well for both `oh my zsh` and `vim-airline`, as well as symbols and
 emojis, therefore the unicode icons work perfectly in `ranger`, which is also the default file manager on Manjaro i3.
 Highly recommended!
 
