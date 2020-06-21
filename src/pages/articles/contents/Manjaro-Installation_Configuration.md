@@ -23,7 +23,7 @@ I need.
 
 ## Preparation
 
-I have an old 2013 Macbook pro which was not really active at the moment, so I decided to give it a try regardless
+I have an old 2013 MacBook pro which was not really active at the moment, so I decided to give it a try regardless
 the bad customization capability of Apple.
 
 Here are some of the details of my machine
@@ -83,7 +83,7 @@ powerline fonts setup, terminal switching and etc. So now I am going to talk abo
 it can help other people who have the similar problems.
 
 
-## Dispaly setup
+## Dispaly Setup
 
 ### DPI and Fonts
 
@@ -145,7 +145,34 @@ I highly recommend `st` as it is light-weighted, simple to set up, and easy to u
 emojis, therefore the unicode icons work perfectly in `ranger`, which is also the default file manager on Manjaro i3.
 Highly recommended!
 
+
 ## Broadcom Wireless Driver
+
+### Screen Flickering
+
+I have a Broadcom BCM57786 on this Mac. The first problem I noticed is that my screen flickered once the wifi was connected.
+I found the issue while I was using the USB drive to install the OS. I wasn't thinking too much as I thought it was some
+compatibility issue or something on the installer drive system. However, after the installation, the issue persisted. The
+funny thing was once I disconnected from wifi, everything went back to normal, but with wifi connected, my screen was insanely
+flickering. So logically, I thought it might be because of my graphic card driver. I searched almost everywhere and replaced
+the driver multiple times, even reinstalled the system, but wasn't successful. And then I found a "trick", which was that if
+I closed my laptop lid and reopened it, the issue was gone. It was pretty interesting as I couldn't figure out why that was
+the case. I don't generally quite like the magic solution, but I decided to fix another problem(My wifi was super slow. It was
+around 30kps which was unbelievable) and then come back. To my surprise, I got two birds with one stone.
+
+### Wireless Card Driver Installation
+
+As I said above, my Internet was incredibly slow on this machine while my other devices were normal. So I started to think that
+my wireless card driver was not compatible, or there was some misconfiguration in my setup. In the next few hours, I had tried
+different methods provided by different people, but none of them worked, until I found this
+[artile](https://forum.manjaro.org/t/broadcom-wifi-driver-fails-to-install-properly/46316). This article explained the wireless
+card drivers' problem really good, and broke down the solution crystal clear. I followed the instruction here and replaced the
+drive, and it WORKED! The speed went from 30kps to 200ish mbps! Yay!
+
+Moreover, it actually fixed the flickering screen problem! They all added up.
+
+I believe this article benefits not only the Manjaro users, but all other distro users as well. People in Manjaro community are
+helpful and responsive, which should be really appreciated.
 
 
 ## Email, Calendar and PDF Reader
