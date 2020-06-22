@@ -165,7 +165,7 @@ around 30kps which was unbelievable) and then come back. To my surprise, I got t
 As I said above, my Internet was incredibly slow on this machine while my other devices were normal. So I started to think that
 my wireless card driver was not compatible, or there was some misconfiguration in my setup. In the next few hours, I had tried
 different methods provided by different people, but none of them worked, until I found this
-[artile](https://forum.manjaro.org/t/broadcom-wifi-driver-fails-to-install-properly/46316). This article explained the wireless
+[thread](https://forum.manjaro.org/t/broadcom-wifi-driver-fails-to-install-properly/46316). The post answer explained the wireless
 card drivers' problem really good, and broke down the solution crystal clear. I followed the instruction here and replaced the
 drive, and it WORKED! The speed went from 30kps to 200ish mbps! Yay!
 
@@ -175,8 +175,13 @@ I believe this article benefits not only the Manjaro users, but all other distro
 helpful and responsive, which should be really appreciated.
 
 
-## Email, Calendar and PDF Reader
+## Email, Calendar, and PDF Reader
 
+### Neomutt
+
+### Calcurse
+
+### Zathura
 
 ## Resources and References
 
