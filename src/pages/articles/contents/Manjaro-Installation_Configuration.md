@@ -83,7 +83,7 @@ powerline fonts setup, terminal switching and etc. So now I am going to talk abo
 it can help other people who have the similar problems.
 
 
-## Dispaly Setup
+## Display Setup
 
 ### DPI and Fonts
 
