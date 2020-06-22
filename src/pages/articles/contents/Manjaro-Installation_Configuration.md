@@ -87,11 +87,12 @@ it can help other people who have the similar problems.
 
 ### DPI and Fonts
 
-I have a retina display which has the resolution of 2560 x 1600. So right after I installed the system, the default font
-size is too small. The .Xresource file is the one that controls the X client applications. It controls the terminal
-preference, e.g. colors, DPIs, and other fun stuff.
+I have a retina display laptop which has the resolution of 2560 x 1600. So right after I installed the system, the default font
+size was too small for me. I needed to change the default display DPI for my new system. Here the .Xresource file was the one
+that I should modify. This file controls the X client applications. It has the terminal
+preferences setup, such as colors, DPIs, and other fun stuff.
 
-I set my `Xft.dpi` as 120, which is really good for me.
+I set my `Xft.dpi` as 120, which worked perfectly for me.
 
 ```
 Xft.dpi: 120
