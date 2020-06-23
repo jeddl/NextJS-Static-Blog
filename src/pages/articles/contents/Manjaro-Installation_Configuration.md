@@ -16,10 +16,10 @@ The reason why I chose Manjaro with i3 was:
 
 1. It is Arch based, and I really would like to try one of these rolling release distros.
 2. It is not Arch, which means, for example the Manjaro i3, comes with some feature pre-installed so that I didn't
-have to start from scratch.(Which might be really good for those who want to start from 0. And one of the advantages of
-doing it is you will absolutely know your system inside-out)
+   have to start from scratch.(Which might be really good for those who want to start from 0. And one of the advantages of
+   doing it is you will absolutely know your system inside-out)
 3. i3 is fast and keyboard based, also really simple and beautiful(simple is beautiful BTW), which is exactly what
-I need.
+   I need.
 
 ## Preparation
 
@@ -108,7 +108,7 @@ I set my `Xft.dpi` as 120, which worked perfectly for me.
 Xft.dpi: 120
 ```
 
-The fonts can be set up in here as well. For example, I installed `ZSH` as my shell environment with 
+The fonts can be set up in here as well. For example, I installed `ZSH` as my shell environment with
 [oh my zsh](https://github.com/ohmyzsh/ohmyzsh). If you have used `oh my zsh` before, then you must know that in order to
 display some ascii symbols, you have to install Powerline. And then you will have to set font family and font size here,
 for both system and terminal, here.
@@ -156,7 +156,6 @@ I highly recommend `st` as it is light-weighted, simple to set up, and easy to u
 emojis, therefore the unicode icons work perfectly in `ranger`, which is also the default file manager on Manjaro i3.
 Highly recommended!
 
-
 ## Broadcom Wireless Driver
 
 ### Screen Flickering
@@ -185,7 +184,6 @@ Moreover, it actually fixed the flickering screen problem! They all added up.
 I believe this article benefits not only the Manjaro users, but all other distro users as well. People in Manjaro community are
 helpful and responsive, which should be really appreciated.
 
-
 ## Email, Calendar, and PDF Reader
 
 ### Neomutt
@@ -204,4 +202,3 @@ some alternatives, and I think they are worth trying as well.
 ## Resources and References
 
 ...To be continued
-
