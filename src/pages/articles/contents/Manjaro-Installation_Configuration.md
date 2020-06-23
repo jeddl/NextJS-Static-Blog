@@ -82,6 +82,16 @@ During the configuration, I had some challenges. For example: resolution font si
 powerline fonts setup, terminal switching and etc. So now I am going to talk about some of the fun stuff and hopefully
 it can help other people who have the similar problems.
 
+## Installation
+
+The whole installation process was smooth. I downloaded an image from [Manajaro official website](https://manjaro.org/download/#i3),
+and used [Etcher](https://www.balena.io/etcher/) to burn the USB installation drive since I was using a Mac.
+
+When starting the machine, hold `option` key to enter the disk loading page, and use the USB to start. And then just follow
+the steps.
+
+The installer I had chose was i3 community package, and so it came with the graphic installation options. That made the
+installing process really easy.
 
 ## Display Setup
 
@@ -179,6 +189,13 @@ helpful and responsive, which should be really appreciated.
 ## Email, Calendar, and PDF Reader
 
 ### Neomutt
+
+I installed `Neomutt` as my mail terminal-based email application. The setup was easy. I used [mutt-wizard](https://github.com/LukeSmithxyz/mutt-wizard)
+package created by [Luke](https://lukesmith.xyz/) and it worked great.
+
+There were few optional things I did to customize it. I installed `lynx` to view the html format in terminal, and `urlview` to
+open the links on the browser from emails. Both applications are extremely light, and they work as expected. There are, of course,
+some alternatives, and I think they are worth trying as well.
 
 ### Calcurse
 
