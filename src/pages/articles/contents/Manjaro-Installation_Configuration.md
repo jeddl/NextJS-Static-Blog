@@ -197,8 +197,20 @@ some alternatives, and I think they are worth trying as well.
 
 ### Calcurse
 
+`Calcurse` is another command line calender/reminder/to-do list terminal based application. It is light and fast. I installed it
+from `pacman`. Nice and easy. I love it's simpleness and the lightning speed.
+
 ### Zathura
+
+There are a lot of PDF readers in Linux. `Zathura` is terminal based minimal application. You can bind shortcut keys to it, but out
+of the box, it supports vim movement.
 
 ## Resources and References
 
-...To be continued
+1. My [dotfiles](https://github.com/jeddl/dotfiles). It will be constantly updating, as I will experiment different applications and
+   environment. (I might do more research on [dwm](https://dwm.suckless.org/) and try it out.)
+
+2. Luke Smith's dotfile [repo](https://github.com/LukeSmithxyz/voidrice), I used a lot of his scripts, modified, and applied to my machine the way I wanted.
+
+3. [Manjaro Forum](https://forum.manjaro.org/), where I found a bunch of useful posts and tips.
+
