@@ -9,14 +9,14 @@ tag: OS
 ## Manjaro
 
 I have wanted to install and use Arch or an Arch based Linux distro for a while. So recently I decided to try
-[Manjaro](https://manjaro.org/) out along with [i3](https://i3wm.org/) WM. (I have tried KDE Plasma and GNOME
+[Manjaro](https://manjaro.org/) Architect along with [i3](https://i3wm.org/) WM. (I have tried KDE Plasma and GNOME
 as well, but didn't quite like it as I was not trying to configure my entire Linux desktop like Mac or Windows.)
 
-The reason why I chose Manjaro with i3 was:
+The reason why I chose Manjaro Architect with i3 was:
 
 1. It is Arch based, and I really would like to try one of these rolling release distros.
-2. It is not Arch, which means, for example the Manjaro i3, comes with some feature pre-installed so that I didn't
-   have to start from scratch.(Which might be really good for those who want to start from 0. And one of the advantages of
+2. It is not Arch, which means, for example the Manjaro Architect, comes with some feature pre-installed so that I didn't
+   have to start from completely scratch.(Which might be really good for those who want to start from 0. And one of the advantages of
    doing it is you will absolutely know your system inside-out)
 3. i3 is fast and keyboard based, also really simple and beautiful(simple is beautiful BTW), which is exactly what
    I need.
@@ -90,8 +90,10 @@ and used [Etcher](https://www.balena.io/etcher/) to burn the USB installation dr
 When starting the machine, hold `option` key to enter the disk loading page, and use the USB to start. And then just follow
 the steps.
 
-The installer I had chose was i3 community package, and so it came with the graphic installation options. That made the
-installing process really easy.
+As I mentioned above, I chose Manjaro Architect. The setup process was pretty straight forward most of the time, but there were
+some tricky parts  would like to discuss.
+
+...To Be Continued...
 
 ## Display Setup
 
