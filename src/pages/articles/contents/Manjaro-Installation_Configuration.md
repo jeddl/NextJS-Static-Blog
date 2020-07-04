@@ -90,8 +90,8 @@ and used [Etcher](https://www.balena.io/etcher/) to burn the USB installation dr
 When starting the machine, hold `option` key to enter the disk loading page, and use the USB to start. And then just follow
 the steps.
 
-As I mentioned above, I chose Manjaro Architect. The setup process was pretty straight forward most of the time, but there were
-some tricky parts  would like to discuss.
+As I mentioned above, I chose Manjaro Architect. The setup process was pretty straightforward most of the time, but there were
+some tricky parts that I would like to discuss.
 
 ...To Be Continued...
 
